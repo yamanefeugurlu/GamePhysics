@@ -23,4 +23,5 @@ public:
     float lineLength;
     float bounceForce;
     float bounceForceMult;
+    float bounceForceDecreaseRate;
 };

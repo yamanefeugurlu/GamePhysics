@@ -16,6 +16,7 @@ void Assignment1Scene::OnEnable()
     bounceForce = 6;
 
     bounceForceMult = 1;
+    bounceForceDecreaseRate = 0.88;
 
     circlePosition = circlePosition + initPos;
 
@@ -41,13 +42,13 @@ void Assignment1Scene::Update(float deltaTime)
     {
 
         circleVel.y += -circleVel.y + (bounceForce * bounceForceMult);
-        bounceForceMult *= 0.85f;
+        bounceForceMult *= bounceForceDecreaseRate;
     }
 
     if (topLineOriginPos.y - circlePosition.y < circleRadius && circleVel.y > 0)
     {
         circleVel.y += -circleVel.y - (bounceForce * bounceForceMult);
-        bounceForceMult *= 0.85f;
+        bounceForceMult *= bounceForceDecreaseRate;
     }
 
     // Bounce off left or right
@@ -55,13 +56,13 @@ void Assignment1Scene::Update(float deltaTime)
     {
 
         circleVel.x += -circleVel.x + (bounceForce * bounceForceMult);
-        bounceForceMult *= 0.85f;
+        bounceForceMult *= bounceForceDecreaseRate;
     }
 
     if (rightLineOriginPos.x - circlePosition.x < circleRadius && circleVel.x > 0) 
     {
         circleVel.x += -circleVel.x - (bounceForce * bounceForceMult);
-        bounceForceMult *= 0.85f;
+        bounceForceMult *= bounceForceDecreaseRate;
     }
 
     
