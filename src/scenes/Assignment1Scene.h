@@ -22,4 +22,5 @@ public:
     glm::vec2 leftLineOriginPos;
     float lineLength;
     float bounceForce;
+    float bounceForceMult;
 };
