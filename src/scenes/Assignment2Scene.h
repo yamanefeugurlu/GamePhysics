@@ -2,6 +2,7 @@
 
 #include "core/Simple2DScene.h"
 
+
 class Assignment2Scene : public Simple2DScene {
 public:
     virtual void OnEnable() override;
