@@ -41,28 +41,32 @@ void Assignment1Scene::Update(float deltaTime)
     if (circlePosition.y - bottomLineOriginPos.y < circleRadius && circleVel.y < 0)
     {
 
-        circleVel.y += -circleVel.y + (bounceForce * bounceForceMult);
-        bounceForceMult *= bounceForceDecreaseRate;
+        //circleVel.y += -circleVel.y + (bounceForce * bounceForceMult);
+        //bounceForceMult *= bounceForceDecreaseRate;
+        circleVel.y *= -1;
     }
 
     if (topLineOriginPos.y - circlePosition.y < circleRadius && circleVel.y > 0)
     {
-        circleVel.y += -circleVel.y - (bounceForce * bounceForceMult);
-        bounceForceMult *= bounceForceDecreaseRate;
+        //circleVel.y += -circleVel.y - (bounceForce * bounceForceMult);
+        //bounceForceMult *= bounceForceDecreaseRate;
+        circleVel.y *= -1;
     }
 
     // Bounce off left or right
     if (circlePosition.x - leftLineOriginPos.x < circleRadius && circleVel.x < 0)
     {
 
-        circleVel.x += -circleVel.x + (bounceForce * bounceForceMult);
-        bounceForceMult *= bounceForceDecreaseRate;
+        //circleVel.x += -circleVel.x + (bounceForce * bounceForceMult);
+        //bounceForceMult *= bounceForceDecreaseRate;
+        circleVel.x *= -1;
     }
 
     if (rightLineOriginPos.x - circlePosition.x < circleRadius && circleVel.x > 0) 
     {
-        circleVel.x += -circleVel.x - (bounceForce * bounceForceMult);
-        bounceForceMult *= bounceForceDecreaseRate;
+        //circleVel.x += -circleVel.x - (bounceForce * bounceForceMult);
+        //bounceForceMult *= bounceForceDecreaseRate;
+        circleVel.x *= -1;
     }
 
     
