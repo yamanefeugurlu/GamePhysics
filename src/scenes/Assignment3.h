@@ -11,4 +11,6 @@ public:
     virtual void DrawGUI() override;
 
     virtual const char* GetName() override { return "Assignment 3 "; };
+
+    void computeTrajectory(glm::vec2 vel);
 };
