@@ -1,6 +1,7 @@
 #pragma once
 
 #include "core/Simple2DScene.h"
+#include "../objects/Circle.h"
 
 class Assignment3 : public Simple2DScene {
 public:
@@ -13,4 +14,7 @@ public:
     virtual const char* GetName() override { return "Assignment 3 "; };
 
     void computeTrajectory(glm::vec2 vel);
+
+    private:
+    Circle myCircle;
 };

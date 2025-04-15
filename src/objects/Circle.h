@@ -12,6 +12,7 @@ class Circle
 	public:
     glm::vec2 circlePosition;
     glm::vec2 circleVel;
+    Circle();
     Circle(int radius,int mass,glm::vec2 initialPosition,glm::vec2 initialVelocity);
     void SetPos(glm::vec2 position);
     void SetMass(float newMass);

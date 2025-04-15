@@ -1,6 +1,7 @@
 #pragma once
 
 #include "core/Simple2DScene.h"
+#include "../objects/Circle.h"
 
 class Assignment4 : public Simple2DScene {
 public:
@@ -11,4 +12,8 @@ public:
     virtual void DrawGUI() override;
 
     virtual const char* GetName() override { return "Assignment 4"; };
+
+private: 
+    Circle myCircle;
+    Circle circle2;
 };

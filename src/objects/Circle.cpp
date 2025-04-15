@@ -23,6 +23,11 @@ Circle::Circle(int radius,int mass,glm::vec2 initialPosition,glm::vec2 initialVe
     SetVelocity(initialVelocity);
 }
 
+Circle::Circle()
+{
+    Circle(1, 1, glm::vec2(0, 0), glm::vec2(0, 0));
+}
+
 void Circle::SetPos(glm::vec2 position)
 {
     circlePosition = position;

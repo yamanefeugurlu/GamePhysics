@@ -13,10 +13,11 @@ bool isDragging = false;
 std::vector<glm::vec2> trajectoryPoints;
 
 
-Circle myCircle = Circle(1, 2, glm::vec2(1, 1), glm::vec2(0, 0));
+
+
 void Assignment3::OnEnable() {
     
-
+    myCircle = Circle(1, 2, glm::vec2(1, 1), glm::vec2(0, 0));
 }
 
 void Assignment3::OnDisable() {}
